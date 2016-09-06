@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%! int globalCount = 11 ; %>
+	<%! int globalCount = 0 ; %>
 	<% int localCount = 0 ; %>
 	<%
 		globalCount++;
