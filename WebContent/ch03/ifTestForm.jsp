@@ -11,9 +11,9 @@
 		<dd>
 			<lable for="color">색선택</lable>
 			<select id = "color" name="color" required>
-				<option value="blue" selected>파랑색
+				<option value="blue" >파랑색
 				<option value="green">초록색
-				<option value="red">빨강색
+				<option value="red" selected>빨강색
 				<option value="yellow">기타
 			</select>
 		</dd>
