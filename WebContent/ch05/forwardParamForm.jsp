@@ -21,7 +21,7 @@
 					<option value="red">빨강색
 					<option value="yellow">노랑색
 				</select>
-			</dd>
+			</dd>9
 			<dd>
 				<input type="submit" value="click">
 			</dd>	
