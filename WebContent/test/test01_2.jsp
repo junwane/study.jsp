@@ -1,20 +1,33 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<meta name = "viewport" content = "width = device-width, initial-scale=1.0"/>
-<!DOCTYPE html"-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-</head>
-<% request.setCharacterEncoding("utf-8"); %>
-<body>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+   pageEncoding="UTF-8"%>
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
 <%
-	String name1 = request.getParameter("name");
+   request.setCharacterEncoding("utf-8");
 %>
-<%=name1 %>
-<%	
-	String name2 = request.getParameter("name");
+
+<%
+   String id = request.getParameter("id");
+   String pass = request.getParameter("pass");
+   
+   int i = 2;
+   
+   if (id.equals("s") && pass.equals("2")) {
+      //    session.setAttribute("id", id);         //main.jsp 화면에서 사용할 세션 설정
+      i = 1;
+      System.out.println(id+", "+pass);
+      out.println(i);
+   } else if (id.equals("s")) {
+      i = 0;
+      System.out.println(id+", "+pass);
+      out.println(i);
+   }
+
+   else {
+      i = -1;
+      System.out.println(id+", "+pass);
+      out.println(i);
+   }
+
+   // response.sendRedirect("main.jsp");
 %>
-<%=name2 %>
-</body>
-</html>
