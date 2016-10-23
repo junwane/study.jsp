@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-
+<meta name = "viewport" content = "width = device-width, initial-scale = 1.0"/>
 <h2> if - else문 예제 - 좋아하는 색 선택</h2>
 <form method="post" action="ifTest.jsp">
 	<dl>
@@ -9,7 +8,7 @@
 			<input id="name" name="name" type="text" placeholder = "짱구" autofocus required>
 		</dd>
 		<dd>
-			<lable for="color">색선택</lable>
+			<label for  ="color">색선택</label>
 			<select id = "color" name="color" required>
 				<option value="blue" >파랑색
 				<option value="green">초록색
