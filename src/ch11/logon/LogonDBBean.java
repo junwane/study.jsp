@@ -82,5 +82,41 @@ public class LogonDBBean {
 		}
 		return x;
 	}
+	
+	public int userCheck(String id, String passwd){
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		int x = -1;
+		
+		try{
+			conn = getConnection();
+			
+			String orgPass = passwd;
+			
+			pstmt = conn.prepareStatement("select passwd from member where id = ?");
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()){
+				String dbpasswd = rs.getString("passwd");
+				if(dbpasswd.equals(orgPass)){
+					x = 1;
+				}else{
+					x = 0;
+				}
+			}else{
+				x = -1;
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{
+			if(rs != null)try{ rs.close(); }catch(SQLException e){}
+			if(pstmt != null)try{ pstmt.close(); }catch(SQLException e){}
+			if(conn != null)try{ conn.close(); }catch(SQLException e){}
+		}
+		return x;
+	}
+	
 }
 		
