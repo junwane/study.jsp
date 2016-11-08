@@ -15,5 +15,6 @@
 	${url}
 	${url}
 	
+	<c:redirect url = "jstlEx01.jsp"/>
 </body>
 </html>
