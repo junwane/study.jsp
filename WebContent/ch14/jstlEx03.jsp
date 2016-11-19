@@ -18,9 +18,9 @@
 	</c:forEach>
 	
 	<br><br><br><br>
-	<c:set var = "data" value = "${[1,2,3,4,5,6,7] }"/>
+	<%-- <c:set var = "data" value = "${[1,2,3,4,5,6,7] }"/>
 		<c:forEach items = "${data }" var = "i" begin = "3" end = "5">
 			<c:out value = "${i }"/>
-		</c:forEach>
+		</c:forEach>--%>
 </body>
 </html>
